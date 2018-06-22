@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Test Swagger Client</title>
+	<script language="JavaScript" src='browser/swagger-client.min.js' type='text/javascript'></script>
+	<script type="text/javascript">
+
+	// Initialize swagger, point to a resource listing
+	swagger = new SwaggerClient({
+		url: "http://local.eclipse.org/MediaQ_MVC_V3/docs/json/swagger.json",
+		success : function() {
+			// Authorization, please provie actual api key
+			swagger.clientAuthorizations.add("apiKey", new SwaggerClient.ApiKeyAuthorization("X-API-KEY",'8b51UFM2SlBltx3s6864eUO1zSoefeK5',"query"));
+
+			// query
+			swagger.apis.geoq.video_coverage({approximation:'triangle', vid:'a996bc1308e7e7f063da8d40660ec08fb50dd58a'}, {responseContentType: 'application/json'}, function(response) {
+				document.getElementById("mydata").innerHTML = JSON.stringify(response.obj);
+			}, function(err) {
+				document.getElementById("mydata").innerHTML = "No data!";
+			});
+		}
+	});
+
+	</script>
+  </head>
+<body>
+  <div id="mydata"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+
+  "type": "FeatureCollection",
+  "features": [
+      {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.28841090202332,
+          34.023142442135686
+        ]
+      },
+      "type": "Feature",
+      "id" : 0,
+      "properties": {
+        "videoid": "1",
+        "time": "Wednesday, July 1, 2015",
+        "href": "http://mediaqv3.cloudapp.net/MediaQ_MVC_V3/home"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.28526735305786,
+          34.02198644244419
+        ]
+      },
+      "type": "Feature",
+      "id" : 1,
+      "properties": {
+        "videoid": "1",
+        "time": "Wednesday, July 1, 2015",
+        "href": "http://mediaqv3.cloudapp.net/MediaQ_MVC_V3/home"
+      }
+    }
+  ]
+}
